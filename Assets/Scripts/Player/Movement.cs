@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
 
     private void launch(Vector2 direction, float distance = 1.0f)
     {
-        body.AddForce(launchMag * distance * direction.normalized, ForceMode2D.Impulse);
+        body.AddForce(launchMag * distance * body.mass * direction.normalized, ForceMode2D.Impulse);
         jumpDown = false;
 
         lr.positionCount = 0;
