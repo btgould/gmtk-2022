@@ -5,33 +5,40 @@ using UnityEngine;
 public class RepeatedPathManager : MonoBehaviour
 {
     [SerializeField] private Spawner spawner;
-    // [SerializeField] private Path path; // TODO: figure out how to handle paths
-    private List<GameObject> objects = new List<GameObject>();
+    [SerializeField] private Vector2[] path; // TODO: figure out how to handle paths
+    private List<(GameObject, PathFollow)> objects = new List<(GameObject, PathFollow)>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        // Check if new object has been spawned yet
         if (spawner.isNewObject())
         {
             GameObject newObj = spawner.getNewObject();
-            objects.Add(newObj);
+            PathFollow pf = newObj.GetComponent<PathFollow>();
+            pf.setWaypoints(path);
+            objects.Add((newObj, pf));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            foreach (GameObject obj in objects)
-            {
-                spawner.removeObject(obj);
-                Destroy(obj);
-            }
 
-            objects.Clear();
+        // Check if object has reached end of path and should be deleted
+        GameObject objRemove = null;
+        PathFollow pfRemove = null;
+
+        foreach ((GameObject obj, PathFollow pf) in objects)
+        {
+            if (pf.isPathFinished())
+            {
+                objRemove = obj;
+                pfRemove = pf;
+                break;
+            }
+        }
+
+        if (objRemove != null)
+        {
+            spawner.removeObject(objRemove);
+            objects.Remove((objRemove, pfRemove));
+            Destroy(objRemove);
         }
     }
 }

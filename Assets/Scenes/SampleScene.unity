@@ -735,8 +735,8 @@ MonoBehaviour:
   spawnable: {fileID: 4104840682835631299, guid: c5ba83eedf22b95e482997e51726ebbd, type: 3}
   maxObjs: 5
   spawnPos: {x: 1, y: 0, z: 0}
-  firstSpawnDelay: 0
-  spawnInterval: 0.5
+  firstSpawnDelay: 1
+  spawnInterval: 1
 --- !u!4 &1594475593
 Transform:
   m_ObjectHideFlags: 0
@@ -764,6 +764,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1594475592}
+  path:
+  - {x: 1, y: -1.3}
+  - {x: 3, y: -1.3}
 --- !u!1 &1681026088
 GameObject:
   m_ObjectHideFlags: 0
