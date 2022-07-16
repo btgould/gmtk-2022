@@ -9,6 +9,6 @@ public class Life : MonoBehaviour
     public bool living
     {
         get { return m_living; }
-        set { m_living = living; }
+        set { m_living = value; }
     }
 }

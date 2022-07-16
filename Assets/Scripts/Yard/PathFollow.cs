@@ -7,12 +7,12 @@ public class PathFollow : MonoBehaviour
     [SerializeField] private Vector2[] waypoints;
     [SerializeField] private Rigidbody2D body;
     [SerializeField] private float moveSpeed = 0.2f;
-    [SerializeField] private float eps = 1e-16f;
+    [SerializeField] private float eps = 1e-4f;
 
     private int nextPoint = 0;
     private bool pathFinished = false;
 
-    void Update()
+    void FixedUpdate()
     {
         // Check if path is finished
         if (nextPoint >= waypoints.Length)

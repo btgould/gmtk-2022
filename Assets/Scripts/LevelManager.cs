@@ -52,10 +52,12 @@ public class LevelManager : MonoBehaviour
 
     private void restart()
     {
-        if (player != null) Destroy(player);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        player = Instantiate(playerPrefab, playerStartPoint, Quaternion.identity);
-        ICinemachineCamera vcam = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
-        vcam.Follow = player.transform;
+        // if (player != null) Destroy(player);
+
+        // player = Instantiate(playerPrefab, playerStartPoint, Quaternion.identity);
+        // ICinemachineCamera vcam = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
+        // vcam.Follow = player.transform;
     }
 }
