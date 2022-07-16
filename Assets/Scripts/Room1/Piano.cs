@@ -7,7 +7,6 @@ public class Piano : MonoBehaviour
     private Vector2 dim;
 
     [SerializeField] private int sampleRate = 44100;
-    [SerializeField] private int numSecs = 1;
     [SerializeField] private float gain = 0.1f;
     [SerializeField] private float decay = 0.99f;
 
