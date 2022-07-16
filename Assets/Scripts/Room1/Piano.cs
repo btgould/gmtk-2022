@@ -8,9 +8,13 @@ public class Piano : MonoBehaviour
 
     [SerializeField] private int sampleRate = 44100;
     [SerializeField] private int numSecs = 1;
-    [SerializeField] public float frequency = 440f;
-    [SerializeField] public float gain = 0.1f;
-    [SerializeField] public float decay = 0.99f;
+    [SerializeField] private float gain = 0.1f;
+    [SerializeField] private float decay = 0.99f;
+
+    private float frequency;
+    private float minFrequency = 130.8128f;
+    int numKeys = 65;
+    private float freqStep = Mathf.Pow(2, 1.0f / 12);
 
 
     private float increment;
@@ -44,6 +48,9 @@ public class Piano : MonoBehaviour
         float min = transform.position.x - dim.x;
         float max = transform.position.x + dim.x;
         float frac = (pos.x - min) / (max - min);
+
+        int key = Mathf.FloorToInt(frac * numKeys);
+        frequency = minFrequency * Mathf.Pow(freqStep, key);
 
         // Play sound
         gainCurr = gain;
