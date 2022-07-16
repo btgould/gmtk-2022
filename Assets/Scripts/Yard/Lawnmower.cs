@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Lawnmower : MonoBehaviour
 {
-    private enum LawnmowerState { STARTUP, RUNNING, BROKEN };
-    private LawnmowerState state = LawnmowerState.STARTUP;
+    private enum LawnmowerState { HIDDEN, STARTUP, RUNNING, BROKEN };
+    private LawnmowerState state = LawnmowerState.HIDDEN;
 
     [SerializeField] private GameObject player;
     [SerializeField] private int startupTime = 60;
+    [SerializeField] private GameObject mowedMask;
 
     private Life playerLife;
     private PathFollow pathFollow;
+    private SpriteRenderer spriteRenderer;
+    private BoxCollider2D collision;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +22,18 @@ public class Lawnmower : MonoBehaviour
         playerLife = player.GetComponent<Life>();
         pathFollow = GetComponent<PathFollow>();
         pathFollow.enabled = false;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collision = GetComponent<BoxCollider2D>();
+        appear(false);
     }
 
     void FixedUpdate()
     {
         switch (state)
         {
+            case LawnmowerState.HIDDEN:
+                break;
             case LawnmowerState.STARTUP:
                 if (startupTime <= 0)
                 {
@@ -55,5 +64,20 @@ public class Lawnmower : MonoBehaviour
         {
             playerLife.living = false;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            state = LawnmowerState.STARTUP;
+            appear(true);
+        }
+    }
+
+    private void appear(bool appear)
+    {
+        spriteRenderer.enabled = appear;
+        collision.enabled = appear;
     }
 }
