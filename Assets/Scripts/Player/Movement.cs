@@ -7,6 +7,7 @@ using Utils;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float launchMag = 10.0f;
+    [SerializeField] private float spinMag = 2;
     [SerializeField] private float maxLaunchDist = 2.0f;
     [SerializeField] private float launchStartLen = 1.5f;
 
@@ -68,7 +69,10 @@ public class Movement : MonoBehaviour
 
     private void launch(Vector2 direction, float distance = 1.0f)
     {
+        float torqueDir = Mathf.Sign(Vector2.Dot(direction, Vector2.left));
+
         body.AddForce(launchMag * distance * body.mass * direction.normalized, ForceMode2D.Impulse);
+        body.AddTorque(torqueDir * spinMag * Random.Range(0.0f, 1.0f), ForceMode2D.Impulse);
         jumpDown = false;
 
         lr.positionCount = 0;
