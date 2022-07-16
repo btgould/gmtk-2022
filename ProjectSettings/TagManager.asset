@@ -38,6 +38,18 @@ TagManager:
   - 
   - ConveyorBelt
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1202323725
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Platforms
+    uniqueID: 4063241275
+    locked: 0
+  - name: Player
+    uniqueID: 2747775503
+    locked: 0
+  - name: Foreground
+    uniqueID: 1784641431
     locked: 0
