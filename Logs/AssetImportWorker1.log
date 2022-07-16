@@ -7131,3 +7131,217 @@ Received Import Request.
   path: Assets/Scenes/Room1.unity
   artifactKey: Guid(29434f3d54c5360599c8f67af3a58591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Room1.unity using Guid(29434f3d54c5360599c8f67af3a58591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e12bb6c2fc5d7cfa1c279c0d83ff41') in 0.000593 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001022 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/bgould/dev/Unity/gmtk-2022/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.621 seconds
+Domain Reload Profiling:
+	ReloadAssembly (621ms)
+		BeginReloadAssembly (73ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (514ms)
+			LoadAssemblies (48ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (166ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (208ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (41ms)
+				ProcessInitializeOnLoadAttributes (153ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2354 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.4 MB.
+System memory in use after: 99.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3208.
+Total: 2.761233 ms (FindLiveObjects: 0.123445 ms CreateObjectMapping: 0.041639 ms MarkObjects: 2.514765 ms  DeleteObjects: 0.080666 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000936 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/bgould/dev/Unity/gmtk-2022/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.631 seconds
+Domain Reload Profiling:
+	ReloadAssembly (631ms)
+		BeginReloadAssembly (78ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (520ms)
+			LoadAssemblies (47ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (169ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (212ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (43ms)
+				ProcessInitializeOnLoadAttributes (156ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2354 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.3 MB.
+System memory in use after: 99.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3211.
+Total: 2.702619 ms (FindLiveObjects: 0.135964 ms CreateObjectMapping: 0.038590 ms MarkObjects: 2.444247 ms  DeleteObjects: 0.083123 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000972 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/bgould/dev/Unity/gmtk-2022/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.632 seconds
+Domain Reload Profiling:
+	ReloadAssembly (632ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (522ms)
+			LoadAssemblies (48ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (170ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (211ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (41ms)
+				ProcessInitializeOnLoadAttributes (156ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2354 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.4 MB.
+System memory in use after: 99.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3214.
+Total: 2.797116 ms (FindLiveObjects: 0.139740 ms CreateObjectMapping: 0.037429 ms MarkObjects: 2.538708 ms  DeleteObjects: 0.080371 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001001 seconds.
+Callback registration failed. Increase kMaxCallback.
+Fatal Error! Callback registration failed. Increase kMaxCallback.
+Caught fatal signal - signo:6 code:-6 errno:0 addr:0x3e8001273c9
+Obtained 32 stack frames.
+#0  0x007f38fa41a520 in __sigaction
+#1  0x007f38fa46ea7c in pthread_kill
+#2  0x007f38fa41a476 in raise
+#3  0x007f38fa4007f3 in abort
+#4  0x0055b16edf5886 in CrashDontLaunchBugReporter()
+#5  0x0055b16e849616 in EditorMonoConsole::LogToConsoleImplementation(CppLogEntry const&)
+#6  0x0055b16e848cbb in EditorMonoConsole::LogToConsoleImplementation(DebugStringToFileData const&)
+#7  0x0055b16e849ccb in LogToConsoleImplementation(DebugStringToFileData const&)
+#8  0x0055b16f787459 in DebugStringToFilePostprocessedStacktrace(DebugStringToFileData const&)
+#9  0x0055b16f787d1d in DebugStringToFile(DebugStringToFileData const&)
+#10 0x0055b16d3ff250 in CallbackArrayBase<void (*)(AssemblyLoadFailure), void (*)(void const*, AssemblyLoadFailure)>::Register(void (*)(AssemblyLoadFailure), void (*)(void const*, AssemblyLoadFailure), void const*)
+#11 0x0055b16ec85e32 in LoadDomainAndUserAssemblies(bool)
+#12 0x0055b16ec887ec in LoadUserAssemblies()
+#13 0x0055b16eee431b in AssetImportWorkerClient::ReloadMonoDomain(AssetResolver&)
+#14 0x0055b16ef04c7f in core::mutable_function<void ()>::DispatchT<IOService::PostHelper<AssetImportWorkerClient::HandleMessage(PrepareMessage const&)::$_5>(AssetImportWorkerClient::HandleMessage(PrepareMessage const&)::$_5&&, IOService::WrapCallableInFunctionTag)::{lambda()#1}>::Dispatch()
+#15 0x0055b16ef66356 in asio::detail::completion_handler<core::mutable_function<void ()> >::do_complete(asio::detail::task_io_service*, asio::detail::task_io_service_operation*, std::error_code const&, unsigned long)
+#16 0x0055b16ef63cc0 in asio::detail::task_io_service::do_run_one(asio::detail::scoped_lock<asio::detail::posix_mutex>&, asio::detail::task_io_service_thread_info&, std::error_code const&)
+#17 0x0055b16ef63853 in asio::detail::task_io_service::run(std::error_code&)
+#18 0x0055b16ef5e78a in asio::io_service::run()
+#19 0x0055b16ef5e73b in IOService::Run(bool)
+#20 0x0055b16eedb074 in RunAssetImporterV2()
+#21 0x0055b16e9676aa in Application::InitializeProject()
+#22 0x0055b16ee02686 in InitializeUnity(void*)
+#23 0x007f38fbd1c2a8 in g_main_context_check
+#24 0x007f38fbd1bc24 in g_main_context_dispatch
+#25 0x007f38fbd706f8 in g_io_channel_new_file
+#26 0x007f38fbd1b293 in g_main_loop_run
+#27 0x007f38fb01fcfd in gtk_main
+#28 0x0055b16ee02168 in main
+#29 0x007f38fa401d90 in __libc_init_first
+#30 0x007f38fa401e40 in __libc_start_main
+#31 0x0055b16d390029 in _start
