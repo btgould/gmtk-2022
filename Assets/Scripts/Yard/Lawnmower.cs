@@ -10,6 +10,7 @@ public class Lawnmower : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private int startupTime = 60;
     [SerializeField] private GameObject mowedMask;
+    private float scaleToTransRatio = 3f / 4;
 
     private Life playerLife;
     private PathFollow pathFollow;
@@ -43,6 +44,11 @@ public class Lawnmower : MonoBehaviour
                 startupTime--;
                 break;
             case LawnmowerState.RUNNING:
+                float scale = mowedMask.transform.position.x - transform.position.x;
+                Vector3 mowedScale = mowedMask.transform.localScale;
+                mowedScale.x = scale * scaleToTransRatio;
+                mowedMask.transform.localScale = mowedScale;
+
                 if (pathFollow.isPathFinished())
                 {
                     state = LawnmowerState.BROKEN;
@@ -50,7 +56,7 @@ public class Lawnmower : MonoBehaviour
                 }
                 break;
             case LawnmowerState.BROKEN:
-                // TODO: something to show brokeness / disappear / etc.
+                appear(false);
                 break;
             default:
                 Debug.LogError("Invalid Lawnmower state");
