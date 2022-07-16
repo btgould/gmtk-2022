@@ -3,8 +3,18 @@ using Cinemachine;
 
 public class CameraBounds : CinemachineExtension
 {
-    [SerializeField] private Vector2 minPos = new Vector2(-10, -10);
-    [SerializeField] private Vector2 maxPos = new Vector2(10, 10);
+    [SerializeField] private GameObject background;
+
+    private Vector2 minPos;
+    private Vector2 maxPos;
+    private SpriteRenderer bgSprite;
+
+    void Start()
+    {
+        bgSprite = background.GetComponent<SpriteRenderer>();
+        minPos = bgSprite.transform.position - bgSprite.bounds.extents;
+        maxPos = bgSprite.transform.position + bgSprite.bounds.extents;
+    }
 
     protected override void PostPipelineStageCallback(
         CinemachineVirtualCameraBase vcam,
@@ -13,8 +23,12 @@ public class CameraBounds : CinemachineExtension
         if (stage == CinemachineCore.Stage.Finalize)
         {
             var pos = state.RawPosition;
-            pos.x = Mathf.Clamp(pos.x, minPos.x, maxPos.x);
-            pos.y = Mathf.Clamp(pos.y, minPos.y, maxPos.y);
+            float aspect = Camera.main.aspect;
+            float vOff = Camera.main.orthographicSize;
+            float hOff = vOff * aspect;
+
+            pos.x = Mathf.Clamp(pos.x, minPos.x + hOff, maxPos.x - hOff);
+            pos.y = Mathf.Clamp(pos.y, minPos.y + vOff, maxPos.y - vOff);
             state.RawPosition = pos;
         }
     }
