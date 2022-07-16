@@ -5,8 +5,14 @@ using UnityEngine;
 public class RepeatedPathManager : MonoBehaviour
 {
     [SerializeField] private Spawner spawner;
-    [SerializeField] private Vector2[] path; // TODO: figure out how to handle paths
+    [SerializeField] private Vector2[] path;
     private List<(GameObject, PathFollow)> objects = new List<(GameObject, PathFollow)>();
+
+    void Awake()
+    {
+        // TODO: prespawn ants
+        spawner.SetSpawnPoint(path[0]);
+    }
 
     void Update()
     {
@@ -16,6 +22,7 @@ public class RepeatedPathManager : MonoBehaviour
             GameObject newObj = spawner.getNewObject();
             PathFollow pf = newObj.GetComponent<PathFollow>();
             pf.setWaypoints(path);
+            pf.start();
             objects.Add((newObj, pf));
         }
 

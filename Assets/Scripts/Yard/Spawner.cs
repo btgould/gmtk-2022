@@ -43,4 +43,9 @@ public class Spawner : MonoBehaviour
     {
         objects.Remove(obj);
     }
+
+    public void SetSpawnPoint(Vector3 spawnPoint)
+    {
+        spawnPos = spawnPoint;
+    }
 }

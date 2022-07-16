@@ -39,6 +39,7 @@ public class Lawnmower : MonoBehaviour
                 if (startupTime <= 0)
                 {
                     pathFollow.enabled = true;
+                    pathFollow.start();
                     state = LawnmowerState.RUNNING;
                 }
                 startupTime--;

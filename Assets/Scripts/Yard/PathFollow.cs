@@ -11,9 +11,12 @@ public class PathFollow : MonoBehaviour
 
     private int nextPoint = 0;
     private bool pathFinished = false;
+    private bool started = false;
 
     void FixedUpdate()
     {
+        if (!started) return;
+
         // Check if path is finished
         if (nextPoint >= waypoints.Length)
         {
@@ -53,5 +56,10 @@ public class PathFollow : MonoBehaviour
     public bool isPathFinished()
     {
         return pathFinished;
+    }
+
+    public void start()
+    {
+        started = true;
     }
 }
