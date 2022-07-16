@@ -10,12 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3452040993280074190}
   - component: {fileID: 3452040993280074191}
-  - component: {fileID: 3452040993280074197}
-  - component: {fileID: 3452040993280074196}
-  - component: {fileID: 3452040993280074195}
-  - component: {fileID: 3452040993280074194}
-  - component: {fileID: 3452040993280074193}
-  - component: {fileID: 3452040993280074192}
+  - component: {fileID: 3452040993102932930}
   m_Layer: 0
   m_Name: shelf
   m_TagString: Untagged
@@ -30,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3452040993280074189}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: -1.4, z: 35.912205}
   m_LocalScale: {x: 3.8, y: 3.8, z: 1}
   m_Children: []
@@ -88,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3452040993280074197
-BoxCollider2D:
+--- !u!68 &3452040993102932930
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,146 +96,31 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.6842144, y: -0.15594578}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.31, y: 3}
-    newSize: {x: 8.31, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.367689, y: 2.4136453}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
---- !u!61 &3452040993280074196
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452040993280074189}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.1539983, y: -0.24951285}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.31, y: 3}
-    newSize: {x: 8.31, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4359081, y: 2.226509}
-  m_EdgeRadius: 0
---- !u!61 &3452040993280074195
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452040993280074189}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.3267126, y: -0.6424964}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.31, y: 3}
-    newSize: {x: 8.31, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0366898, y: 1.4405421}
-  m_EdgeRadius: 0
---- !u!61 &3452040993280074194
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452040993280074189}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.11228287, y: -1.2663049}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.31, y: 3}
-    newSize: {x: 8.31, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.9856358, y: 0.21797776}
-  m_EdgeRadius: 0
---- !u!61 &3452040993280074193
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452040993280074189}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -3.1937711, y: -0.9481511}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.31, y: 3}
-    newSize: {x: 8.31, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7497487, y: 0.40506244}
-  m_EdgeRadius: 0
---- !u!61 &3452040993280074192
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452040993280074189}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.9068315, y: -0.57388055}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.31, y: 3}
-    newSize: {x: 8.31, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25071764, y: 0.38011146}
-  m_EdgeRadius: 0
+  m_Points:
+  - {x: -4.0378428, y: -1.2616699}
+  - {x: -3.5151353, y: -1.2685355}
+  - {x: -3.5398626, y: -0.83152574}
+  - {x: -3.038551, y: -0.83751374}
+  - {x: -3.036744, y: -0.39352918}
+  - {x: -2.8211617, y: -0.395811}
+  - {x: -2.8208823, y: 0.06860629}
+  - {x: -1.840138, y: 0.058144033}
+  - {x: -1.8306994, y: 0.8523149}
+  - {x: -0.5429359, y: 0.9020234}
+  - {x: -0.5330278, y: 1.3499069}
+  - {x: 0.0054368377, y: 1.3418177}
+  - {x: 0.05363655, y: 1.1823614}
+  - {x: 0.5496074, y: 1.1967229}
+  - {x: 0.553135, y: 1.0757476}
+  - {x: 0.9316534, y: 1.0653377}
+  - {x: 0.93510675, y: 1.1760821}
+  - {x: 2.7600276, y: 1.1642375}
+  - {x: 2.7543998, y: 1.0343271}
+  - {x: 3.8037694, y: 1.0571892}
+  - {x: 3.8125508, y: -1.2346338}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

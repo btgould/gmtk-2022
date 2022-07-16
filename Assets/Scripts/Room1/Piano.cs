@@ -9,6 +9,7 @@ public class Piano : MonoBehaviour
     [SerializeField] private int sampleRate = 44100;
     [SerializeField] private float gain = 0.1f;
     [SerializeField] private float decay = 0.99f;
+    [SerializeField] private float startDelay = 10;
 
     private float frequency;
     private float minFrequency = 130.8128f;
@@ -19,6 +20,7 @@ public class Piano : MonoBehaviour
     private float increment;
     private float phase = 0;
     private float gainCurr = 0;
+    private float currStartDelay = 0;
 
     private AudioSource audioSource;
 
@@ -26,11 +28,13 @@ public class Piano : MonoBehaviour
     void Start()
     {
         gainCurr = gain;
+        currStartDelay = 0;
+
         dim = GetComponent<Collider2D>().bounds.extents;
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (audioSource.isPlaying) gainCurr *= decay;
         if (gainCurr < 1e-2)
@@ -38,24 +42,30 @@ public class Piano : MonoBehaviour
             audioSource.Stop();
             gainCurr = gain;
         }
+
+        currStartDelay--;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Determine location hit on piano
-        Vector2 pos = collision.collider.attachedRigidbody.position;
-        float min = transform.position.x - dim.x;
-        float max = transform.position.x + dim.x;
-        float frac = (pos.x - min) / (max - min);
+        if (currStartDelay <= 0)
+        {
+            // Determine location hit on piano
+            Vector2 pos = collision.collider.attachedRigidbody.position;
+            float min = transform.position.x - dim.x;
+            float max = transform.position.x + dim.x;
+            float frac = (pos.x - min) / (max - min);
 
-        int key = Mathf.FloorToInt(frac * numKeys);
-        frequency = minFrequency * Mathf.Pow(freqStep, key);
+            int key = Mathf.FloorToInt(frac * numKeys);
+            frequency = minFrequency * Mathf.Pow(freqStep, key);
 
-        // Play sound
-        gainCurr = gain;
-        audioSource.Play();
+            // Play sound
+            gainCurr = gain;
+            currStartDelay = startDelay;
+            audioSource.Play();
 
-        Debug.Log(frac);
+            Debug.Log(frac);
+        }
     }
 
     void OnAudioFilterRead(float[] data, int channels)
