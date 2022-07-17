@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 17557211}
   - component: {fileID: 17557212}
   - component: {fileID: 17557213}
+  - component: {fileID: 17557214}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -244,6 +245,29 @@ EdgeCollider2D:
   - {x: 27.633486, y: 2.9170387}
   - {x: 27.61886, y: 5.307745}
   - {x: 40.85743, y: 5.368267}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &17557214
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17557210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -39.462234, y: -36.433727}
+  - {x: -39.02996, y: 19.35962}
+  - {x: 40, y: 19.090736}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
