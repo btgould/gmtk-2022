@@ -9,6 +9,12 @@ public class SuperBounce : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Set velocity to be parallel to direction
+        Vector2 vel = other.attachedRigidbody.velocity;
+        vel = Vector2.Dot(vel, direction) * direction / direction.sqrMagnitude;
+        other.attachedRigidbody.velocity = vel;
+
+        // Apply impulse in direction
         other.attachedRigidbody.AddForce(mag * direction, ForceMode2D.Impulse);
     }
 }
