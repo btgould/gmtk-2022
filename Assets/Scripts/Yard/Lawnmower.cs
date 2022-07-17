@@ -8,7 +8,7 @@ public class Lawnmower : MonoBehaviour
     private LawnmowerState state = LawnmowerState.HIDDEN;
 
     [SerializeField] private GameObject player;
-    [SerializeField] private int startupTime = 60;
+    [SerializeField] private int startupTime = 150;
     [SerializeField] private GameObject mowedMask;
     private float scaleToTransRatio = 3f / 4;
 
@@ -16,6 +16,8 @@ public class Lawnmower : MonoBehaviour
     private PathFollow pathFollow;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D collision;
+
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,8 @@ public class Lawnmower : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collision = GetComponent<BoxCollider2D>();
         appear(false);
+
+        source = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -41,6 +45,9 @@ public class Lawnmower : MonoBehaviour
                     pathFollow.enabled = true;
                     pathFollow.start();
                     state = LawnmowerState.RUNNING;
+
+                    source.Stop();
+                    source.PlayOneShot(LawnmowerAudio.get().running, 2);
                 }
                 startupTime--;
                 break;
@@ -79,6 +86,9 @@ public class Lawnmower : MonoBehaviour
         {
             state = LawnmowerState.STARTUP;
             appear(true);
+
+            // source.clip = LawnmowerAudio.get().startup;
+            source.PlayOneShot(LawnmowerAudio.get().startup, 1);
         }
     }
 
