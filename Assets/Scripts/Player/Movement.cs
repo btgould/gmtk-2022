@@ -14,6 +14,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D body;
     [SerializeField] private LineRenderer lr;
 
+    [SerializeField] private BoardPiece piece;
+    [SerializeField] private float activationDist;
+
     private bool jumpDown = false;
 
     private AudioSource source;
@@ -85,5 +88,14 @@ public class Movement : MonoBehaviour
         // play sound
         source.clip = PlayerAudio.get().shake;
         source.Play();
+
+        // HACK: board game piece should really handle this itself
+        if (piece != null)
+        {
+            if (Vector2.Distance(transform.position, piece.transform.position) < activationDist)
+            {
+                piece.hop(Random.Range(4, 10));
+            }
+        }
     }
 }

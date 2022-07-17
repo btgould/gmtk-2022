@@ -301,6 +301,8 @@ MonoBehaviour:
   launchStartLen: 1
   body: {fileID: 4861885914152301612}
   lr: {fileID: 4861885914152301608}
+  piece: {fileID: 0}
+  activationDist: 15
 --- !u!120 &4861885914152301608
 LineRenderer:
   m_ObjectHideFlags: 0
