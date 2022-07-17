@@ -16,8 +16,15 @@ public class PlayerAudio : MonoBehaviour
         s = this;
     }
 
-    [SerializeField] private AudioClip m_shake;
-    public AudioClip shake { get { return m_shake; } }
+    [SerializeField] private List<AudioClip> m_shakes;
+    public AudioClip shake
+    {
+        get
+        {
+            int idx = Random.Range(0, m_shakes.Count);
+            return m_shakes[idx];
+        }
+    }
 
     public PlayerAudio get() { return s; }
 }
