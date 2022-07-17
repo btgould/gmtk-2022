@@ -640,6 +640,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3503609271482866531, guid: 2c1876c56e8663e688dee31a215f53a9, type: 3}
+      propertyPath: numAvg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503609271482866531, guid: 2c1876c56e8663e688dee31a215f53a9, type: 3}
       propertyPath: maxCamSize
       value: 20
       objectReference: {fileID: 0}

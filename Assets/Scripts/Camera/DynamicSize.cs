@@ -15,6 +15,10 @@ public class DynamicSize : MonoBehaviour
     [SerializeField] private float minSizeSpeed, maxSizeSpeed;
     [SerializeField] private float easing;
     [SerializeField] private uint delayFrames;
+    private int numAvg = 20;
+
+    private int idx = 0;
+    private float[] pastSpeeds;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,10 +30,12 @@ public class DynamicSize : MonoBehaviour
         playerRB = playerObj.GetComponent<Rigidbody2D>();
 
         vCam.m_Lens.OrthographicSize = minCamSize;
+
+        pastSpeeds = new float[numAvg];
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // check if player exists
         if (playerRB == null)
@@ -37,8 +43,19 @@ public class DynamicSize : MonoBehaviour
             return;
         }
 
-        // Find how fast the player is going
-        float vel = playerRB.velocity.magnitude;
+        // Add player speed to list
+        pastSpeeds[idx] = playerRB.velocity.magnitude;
+        idx++;
+        idx %= numAvg;
+
+
+        // Calculate avg speed relative to min / max
+        float vel = 0;
+        for (int i = 0; i < numAvg; i++)
+        {
+            vel += pastSpeeds[i];
+        }
+        vel /= numAvg;
         float t = (vel - minSizeSpeed) / (maxSizeSpeed - minSizeSpeed);
         t = Mathf.Clamp(t, 0, 1);
 
@@ -54,7 +71,7 @@ public class DynamicSize : MonoBehaviour
 
         // Set camera size based on speed thresholds
         float newSize = Mathf.Lerp(minCamSize, maxCamSize, t);
-        newSize = Mathf.Lerp(minCamSize, newSize, t);
+        // newSize = Mathf.Lerp(minCamSize, newSize, t);
         float oldSize = vCam.m_Lens.OrthographicSize;
         // if (!player.checkGrounded())
         // {
