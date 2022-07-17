@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StairwayUp.unity
     guid: d4333a8c3d1446e3baa8ffb8451acedb
+  - enabled: 1
+    path: Assets/Scenes/Room2.unity
+    guid: dd1cf224b08162639ab428eab8e2cc8b
   m_configObjects: {}
