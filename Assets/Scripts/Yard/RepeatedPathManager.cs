@@ -8,10 +8,15 @@ public class RepeatedPathManager : MonoBehaviour
     [SerializeField] private Vector2[] path;
     private List<(GameObject, PathFollow)> objects = new List<(GameObject, PathFollow)>();
 
+    // [SerializeField] private AudioClip clip;
+    // private AudioSource source;
+
     void Awake()
     {
         // TODO: prespawn ants
         spawner.SetSpawnPoint(path[0]);
+
+        // source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,6 +40,9 @@ public class RepeatedPathManager : MonoBehaviour
         {
             if (pf.isPathFinished())
             {
+                // source.clip = clip;
+                // source.Play();
+
                 objRemove = obj;
                 pfRemove = pf;
                 break;

@@ -31,7 +31,7 @@ public class PathFollow : MonoBehaviour
 
         Vector2 offset = waypoint - body.position;
         float offMag = offset.magnitude;
-        Vector2 toMove = offset / offMag * moveSpeed;
+        Vector2 toMove = offMag < eps ? Vector2.zero : offset / offMag * moveSpeed;
 
         // make sure we don't overshoot
         if (offMag < toMove.magnitude) toMove = offset;
