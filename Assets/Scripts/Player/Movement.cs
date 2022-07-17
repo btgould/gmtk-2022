@@ -16,11 +16,17 @@ public class Movement : MonoBehaviour
 
     private bool jumpDown = false;
 
+    private PlayerAudio audios;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         lr.positionCount = 0;
         lr.SetPositions(new Vector3[0]);
+
+        audios = GetComponent<PlayerAudio>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -77,5 +83,10 @@ public class Movement : MonoBehaviour
 
         lr.positionCount = 0;
         lr.SetPositions(new Vector3[0]);
+
+        // play sound
+        // TODO: randomize sounds
+        source.clip = audios.get().shake;
+        source.Play();
     }
 }
