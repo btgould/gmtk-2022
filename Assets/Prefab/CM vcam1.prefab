@@ -81,8 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2226409d9efc8fc1822b1db0d11a526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPos: {x: -343.8, y: 2.5}
-  maxPos: {x: 34.5, y: 90.1}
+  background: {fileID: 0}
 --- !u!114 &3503609271482866531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd29c15043e283c481cd28f3d165f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minCamSize: 6
+  minCamSize: 10
   maxCamSize: 15
   minSizeSpeed: 8
   maxSizeSpeed: 20

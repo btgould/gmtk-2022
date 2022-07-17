@@ -24,6 +24,8 @@ public class DynamicSize : MonoBehaviour
 
         GameObject playerObj = vCam.Follow.gameObject;
         playerRB = playerObj.GetComponent<Rigidbody2D>();
+
+        vCam.m_Lens.OrthographicSize = minCamSize;
     }
 
     // Update is called once per frame
