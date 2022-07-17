@@ -4569,14 +4569,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3503609271482866531, guid: 2c1876c56e8663e688dee31a215f53a9, type: 3}
-      propertyPath: maxCamSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3503609271482866531, guid: 2c1876c56e8663e688dee31a215f53a9, type: 3}
-      propertyPath: minCamSize
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3503609271482866534, guid: 2c1876c56e8663e688dee31a215f53a9, type: 3}
       propertyPath: m_Follow
       value: 
