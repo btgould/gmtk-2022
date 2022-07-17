@@ -17,6 +17,9 @@ public class Car : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float z;
     private float startTime;
+    private bool honked = false;
+
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,12 @@ public class Car : MonoBehaviour
         boxCollider.enabled = false;
 
         startTime = Time.time;
+
+        source = GetComponent<AudioSource>();
+
+        // Play honk sound
+        source.clip = CarAudio.get().pass;
+        source.Play();
     }
 
     void FixedUpdate()
@@ -43,7 +52,19 @@ public class Car : MonoBehaviour
         pos.y = newY;
         sprite.transform.position = pos;
 
-        if (t > 1) Destroy(gameObject);
-        else if (elapsed > solidTime) boxCollider.enabled = true;
+        if (t > 1) { Destroy(gameObject); }
+        else if (elapsed > solidTime)
+        {
+            boxCollider.enabled = true;
+
+            // Play passing sound
+            // source.Stop();
+            // source.clip = CarAudio.get().pass;
+            if (!honked)
+            {
+                source.PlayOneShot(CarAudio.get().honk);
+                honked = true;
+            }
+        }
     }
 }

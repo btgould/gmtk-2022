@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
-    private PlayerAudio s;
+    private static PlayerAudio s;
 
     void Awake()
     {
@@ -26,5 +26,5 @@ public class PlayerAudio : MonoBehaviour
         }
     }
 
-    public PlayerAudio get() { return s; }
+    public static PlayerAudio get() { return s; }
 }
